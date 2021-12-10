@@ -1,0 +1,35 @@
+<div>
+    <input type="text" class="studentName" placeholder="Student Name" [(ngModel)]="studentName">
+    <input type="text" class="father'sName" placeholder="Father's Name" [(ngModel)]="fatherName">
+    <input type="text" class="mother'sName" placeholder="Mother's Name" [(ngModel)]="motherName">
+    <input type="text" class="address" placeholder="Address" [(ngModel)]="address">
+    <input type="number" class="standard" placeholder="Class Name" [(ngModel)]="className">
+    <input type="number" class="rollno" placeholder="Roll No" [(ngModel)]="rollno">
+    <input type="number" class="age" placeholder="Age" [(ngModel)]="age">
+    <button (click)="onSubmitClick()" class="button">Submit</button>
+
+    <div class="card">
+        <div class="header">
+            Student's Details:
+        </div>
+        <div class="body">
+            <div>
+                <p class="titlea">Student Name:{{studentDetails[0].studentName}}</p>
+                <p class="texta">Father's Name:{{studentDetails[0].fatherName}}</p>
+                <p class="textb">Mother's Name:{{studentDetails[0].motherName}}</p>
+                <p class="textc">Address:{{studentDetails[0].address}}</p>
+                <p class="numberd">Class:{{studentDetails[0].className}}</p>
+                <p class="numbere">Roll no:{{studentDetails[0].rollno}}</p>
+                <p class="numberf">Age:{{studentDetails[0].age}}</p>
+
+                <button (click)="onEditClick()" class="edit">Edit</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>

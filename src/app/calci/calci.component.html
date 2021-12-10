@@ -1,0 +1,21 @@
+<br><div class="row">
+    <div class="col">
+        <b>NUM 1</b>
+        <input type="text" class="numba" [(ngModel)]="numba"><br>
+        <button (click)="onAddClick()" class="btn btn-primary" value="Add">Add</button>
+    </div>
+
+    <div class="col">
+        <b>NUM 2</b>
+        <input type="text" class="numbb" [(ngModel)]="numbb"><br>
+        <button (click)="onSubClick()" class="btn btn-primary" value="Sub">Subtract</button>
+    </div>
+
+    <div class="col">
+        <button (click)="onDivideClick()" class="btn btn-primary" value="Div">Divide</button><br>
+        <button (click)="onMultiClick()" class="btn btn-primary" value="Multi">Multiply</button><br>
+        <button (click)="onResultClick()" class="btn btn-primary" value="Multi">Result* 2</button>
+    </div>
+</div>
+<br><label for="usr">Result:</label>
+<input type="text" class="form-control" id="usr" [(ngModel)]="numb">

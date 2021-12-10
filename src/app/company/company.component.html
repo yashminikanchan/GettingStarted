@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col">
+        <h3>Company Information</h3>
+        <div class="form-outline">
+            <input type="text" id="formControlLg" class="form-control form-control-lg" placeholder="Company Name"
+                [(ngModel)]="companyName" />
+
+        </div>
+        <br>
+        <div class="form-outline">
+            <input type="text" id="formControlLg" class="form-control form-control-lg" placeholder="Company Address"
+                [(ngModel)]="companyAddress" />
+
+        </div>
+
+        <br><button (click)="onSubmitClick()" class="btn btn-primary" type="submit" value="Submit">Submit</button>
+    </div>
+    <div class="col">
+        <h3>Employee Information</h3>
+        <div class="form-outline">
+            <input type="text" id="formControlLg" class="form-control form-control-lg" placeholder="Employee Name"
+                [(ngModel)]="employeeName"  />
+
+        </div>
+        <br>
+        <div class="form-outline">
+            <input type="text" id="formControlLg" class="form-control form-control-lg" placeholder="Employee Address"
+                [(ngModel)]="employeeAddress"  />
+
+        </div>
+        <br>
+        <div class="form-outline">
+            <input type="number" id="formControlLg" class="form-control form-control-lg" placeholder="Employee Id's"
+                [(ngModel)]="employeeId"  />
+
+        </div>
+        <br><button (click)="onAddClick()" class="btn btn-primary" value="Add">Add</button>
+    </div>
+</div>
+<div class="card">
+    <div class="header">
+        <h5>Company Info:</h5>
+    </div>
+    <div class="body">
+        <div>
+            <p class="titlea">Company Name:{{companyInfo.companyName}}</p>
+            <p class="texta">Company Address:{{companyInfo.companyAddress}}</p>
+            <br><button (click)="onEditClick()" class="edit">Edit</button>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+    <div class="header">
+        <h5>Employee Info:</h5>
+    </div>
+    <div *ngFor="let employeeinfo of employeeList, let i=index" class="body">
+        <div>
+            <p class="titlea">Employee Name:{{employeeinfo.employeeName}}</p>
+            <p class="texta">Employee Address:{{employeeinfo.employeeAddress}}</p>
+            <p class="texta">Employee Id's:{{employeeinfo.employeeId}}</p>
+            <button *ngIf="isEditVisible" (click)="ontheEditClick(i)" class="edit">Edit</button>
+            <br><button *ngIf="!isEditVisible" (click)="onUpdateClick(i)" class="update">Update</button>
+        </div>
+
+    </div>
+
+</div>
