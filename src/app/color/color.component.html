@@ -1,0 +1,22 @@
+<div class="form-outline">
+    <input type="number" id="formControlLg" class="form-control form-control-lg" placeholder="Enter Number Here"
+        [(ngModel)]="enterNumber" />
+
+</div>
+<!-- <br><button (click)="onSubmitClick()" class="btn btn-primary" type="submit" value="Submit">Submit</button> -->
+<div class="card">
+
+    <div class="body">
+        <div>
+            <p type="text" class="titlea">Entered Number:{{enterNumber}}</p>
+        </div>
+    </div>
+</div>
+<div class="dropdown">
+    <button  type="button" class="dropbutton">Select Color:</button>
+    <select name=”color”>
+        <option  class="text-danger" value="red">Red</option>
+        <option  class="text-success" value="green">Green </option>
+        <option  class="text-info" value="blue">Blue </option>
+    </select>
+</div>

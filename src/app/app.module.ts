@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { calciComponent } from './calci/calci.component';
+import { colorComponent } from './color/color.component';
 import { companyComponent } from './company/company.component';
 import { studentComponent } from './student/student.component';
 
@@ -18,7 +19,8 @@ import { studentComponent } from './student/student.component';
     AppComponent,
     studentComponent,
     companyComponent,
-    calciComponent
+    calciComponent,
+    colorComponent
 
   ],
   imports: [
